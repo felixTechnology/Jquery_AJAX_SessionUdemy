@@ -6,6 +6,16 @@ DOM-Document Object Model
 
 3. Use ATOM as an IDE
 4. API JQUERY (api.jquery.com)
+5. Always download the uncompressed minified version of jquery
+- (Download the uncompressed development jQuery 3.3.1)-jquery.com/download/
+-Right-click on link and select download file .
+-Copy the file and paste in your projects.
+
+6. Craete your folders (assets, css, js)
+-create your index.html file
+-create your main.js in JS Folder
+-create css file in -JS Folder
+
 
 
 Other Learning websites provided
@@ -16,3 +26,11 @@ https://html5hive.org/how-to-create-rest-api-with-node-js-and-express/
 
 https://html5hive.org/how-to-chain-javascript-promises/
 
+Webpage is different is different from web application. Web Application is interpreted on line basis
+
+
+
+TO CALL QUERY ,STARTING
+1. Start with the , $ or Jquery
+2. With JQUERY we can search for object and same time turn object into JQUERY Object.
+3.
