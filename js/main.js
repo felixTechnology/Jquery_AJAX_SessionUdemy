@@ -1,6 +1,6 @@
 //passing object into jquery. This set the document you want to run to ready mode.When it is ready it runs what is in the bracket
 //the document means whatever we want can be tuned into a JQuery Object
-$(document).ready(function(){
+$(document).ready(function(){ //call back function
 
    //Instead passing object here we passing string just like how we pass id and classes for CSS.
     //We will type something here which will be searched and found
@@ -21,9 +21,14 @@ $(document).ready(function(){
   //$('body').html('<strong>Hello World...!! </strong>');
 
     //This is appending a class from CSS File which is not defined in html and appending it to an element tag with an ID (#fire)
-    
+
     $(document).ready(function (){
-        $('#fire').addClass('higlight');
+        //$('#church').addClass('higlight');
+        //$('.general').addClass('higlight');//targeting class called general
+        $('#container >>> .middle').addClass('higlight');//targeting class called .middle
+                                                           //This won't allow the immediate children to be effected because there is particular selection element by class names
+                                                            // >>> is used to select sub-children in levels 
+        //How to select part of a list with same ID name. You want to choose sub element and ignore parent element
 
     })
 
