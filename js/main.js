@@ -18,7 +18,14 @@ $(document).ready(function(){
     //JUST LIKE PASSING Jquery object here, one can also pass string which will serve as a selector. That work like class and Id in CSS for search.
    // $('body').text('Hello World');//This is a call to write a text into your body
     //$('body').text('<strong>Hello World</strong>');//Using text function will write whatever you write into the string as it is without formatting..so to let it print it as HTML Text use (.html) function,as seen below
-    $('body').html('<strong>Hello World...!! </strong>');
+  //$('body').html('<strong>Hello World...!! </strong>');
+
+    //This is appending a class from CSS File which is not defined in html and appending it to an element tag with an ID (#fire)
+    
+    $(document).ready(function (){
+        $('#fire').addClass('higlight');
+
+    })
 
 
 });

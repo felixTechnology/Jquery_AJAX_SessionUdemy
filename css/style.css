@@ -1,0 +1,6 @@
+/*Using Selection for JQUERY*/
+
+/*Assuming we have a class in CSS but not in HTML and you want to append the two*/
+.higlight{
+    color: #F00;
+}
