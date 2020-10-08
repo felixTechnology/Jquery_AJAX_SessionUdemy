@@ -23,13 +23,19 @@ $(document).ready(function(){ //call back function
     //This is appending a class from CSS File which is not defined in html and appending it to an element tag with an ID (#fire)
 
     $(document).ready(function (){
-        //$('#church').addClass('higlight');
-        //$('.general').addClass('higlight');//targeting class called general
-        $('#container >>> .middle').addClass('higlight');//targeting class called .middle
+        //$('#church').addClass('highlight');
+        //$('.general').addClass('highlight');//targeting class called general
+        //$('#container >>> .middle').addClass('higlight');//targeting class called .middle
                                                            //This won't allow the immediate children to be effected because there is particular selection element by class names
-                                                            // >>> is used to select sub-children in levels 
+                                                            // >>> is used to select sub-children in levels
         //How to select part of a list with same ID name. You want to choose sub element and ignore parent element
 
+        //It means find the div container and locate input tags and apply a css class to it.This will apply on all input but to select the ones you want,follow what is next to this command
+        //$('#container input').addClass('highlight');
+        $('#container >> input').addClass('highlight');//we use colon and the identification 'required to select the ones needed
+
+        //Assuming out of the fields which are required you want to select only one to have the CSS Color applied on it, you go by the below;
+       // $('#container input[placeholder=E-mail]').addClass('highlight');
     })
 
 
