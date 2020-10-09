@@ -152,11 +152,32 @@
      ){
         /*When we click we need to get the name of the new item,if anything is typed in the field */
          let name = $('#input-create-item').val();
-         /*console.log(name);*/
+         //console.log(name);
 
          //After saving in name (let name) ,we need to clear the content afterward
-         //In Jquery we have what returns a value and what write a text.
-      });
+         //In Jquery we have what returns a value (.value()) and what write (.value(''))
+         $('#input-create-item').val('');
+
+         let html = ' ';
+         html += '<div class="item">';
+           html +=  '<div class="name">' + name +' </div>';
+             html += '<img src="assets/pexels-photo-1640777.jpeg" alt="">';
+                 html +=`<div class="description">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     Esse inventore nostrum officiis quidem quis. Ad corporis,
+                     dolore dolores eius,
+                 </div>`
+
+                 html += '<div class="price">GHC 499</div>';
+                html += '<button>Add to Cart</button>';
+                 html +='</br>';
+                    html += '<a href="">More info</a>'
+                     html +='<div class="more-info">eveniet ex fugit laboriosam maxime molestiae nemo quasi, rem sint ut.</div>';
+        html +='</div>';
+
+        /*$('#container').append(html);*/
+         $('#container').prepend(html);
+     });
     })
 
 
