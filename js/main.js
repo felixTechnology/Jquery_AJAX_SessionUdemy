@@ -68,8 +68,18 @@ $(document).ready(function(){ //call back function
         //console.log($('#snow').parents()); //this help to inspect the elements which are parents to know wherever your elements are located
 
         //This helps you to find the closes parent with satisfy a particular selector you want to target
-        console.log($('#snow').closest('.temperature'));
-        console.log($('#snow').closest('#container'));
+        //console.log($('#snow').closest('.temperature'));
+        //console.log($('#snow').closest('#container'));
+
+        $('.box').on('click', function () {
+
+            //console.log('hello')
+            //$('.box').addClass('highlight');
+
+            //we can improve the code above commented .box . We can replace it with $(this) which literally means it holds in reference within this $('.box').on('click', function ()
+            //$(this).addClass('highlight'); //This will add the class if we have it but to remove-and-add we call it toggle
+            $(this).toggleClass('highlight');
+        })
 
     })
 
