@@ -131,7 +131,7 @@
             }
         })*/
 
-        $('#input-name').on('keyup',function (){
+      /*  $('#input-name').on('keyup',function (){
 
             let name = $(this).val();
            // console.log('Press!!')
@@ -142,7 +142,9 @@
             event.preventDefault();
             $('#feedback-message').text('That\'s fine,' + name)
 
-        })
+        })*/
+
+        /******************************Above Code is For practice***************************************/
     })
 
 

@@ -5,6 +5,7 @@
     color: #F00;
 }*/
 
+/*
 
 .highlight{
 
@@ -36,4 +37,18 @@
 
 .highlight{
     background-color: #FCC;
+}*/
+
+/**********************************Above was for Practice******************************************/
+
+
+body,html{
+    background-color: #EEE;
+    height: 100%;
+}
+
+#container {
+    background-color: #FFF;
+    padding: 12px;
+   height: 100%;
 }
