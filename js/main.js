@@ -1,6 +1,6 @@
 //passing object into jquery. This set the document you want to run to ready mode.When it is ready it runs what is in the bracket
 //the document means whatever we want can be tuned into a JQuery Object
-$(document).ready(function(){ //call back function
+//$(document).ready(function(){ //call back function
 
    //Instead passing object here we passing string just like how we pass id and classes for CSS.
     //We will type something here which will be searched and found
@@ -82,13 +82,70 @@ $(document).ready(function(){ //call back function
         })*/
 
         //adding an ID of an element '.box-button' ..we call it event-delegation
-        $('.box').on('click',  '.box-button',function () {
+       /* $('.box').on('click',  '.box-button',function () {
 
             
             $(this).parent().toggleClass('highlight');
+        })*/
+
+      /*  $('#select-menu').on('change', function (){
+
+            //console.log('HeLLO');
+            //console.log($('#select-menu option:selected'));//Use this to print the selected filter object in console
+
+            //console.log($('#select-menu option:selected').val()); //the val() will print the value of content selected
+          //  console.log($('#select-menu option:selected').text());//this will print the name of the option
+
+           let name =$('#select-menu option:selected').text();
+            let distance =$('#select-menu option:selected').val();
+            let price =$('#select-menu option:selected').data('price');
+
+            console.log(price);
+
+            $('#feedback-message').text('You are signing up for a '+ name + ' , which cost ' + price + ' , to a distance of ' + distance + ' km ' );
+
+        })*/
+
+
+
+      /*  $('#select-menu').on('change', function (){
+
+            //console.log('HeLLO');
+            //console.log($('#select-menu option:selected'));//Use this to print the selected filter object in console
+
+            //console.log($('#select-menu option:selected').val()); //the val() will print the value of content selected
+            //  console.log($('#select-menu option:selected').text());//this will print the name of the option
+
+            let name =$('#select-menu option:selected').text();
+            let distance =$('#select-menu option:selected').val();
+            let price =$('#select-menu option:selected').data('price');
+
+            console.log(price);
+
+            if (distance) {
+                $('#feedback-message').text('You are signing up for a ' + name + ' , which cost ' + price + ' , to a distance of ' + distance + ' km ');
+
+            }else{
+               /!* $('#feedback-message').text('');*!/
+                $('#feedback-message').empty();
+            }
+        })*/
+
+        $('#input-name').on('keyup',function (){
+
+            let name = $(this).val();
+           // console.log('Press!!')
+            $('#feedback-message').text('Pleased to meet you,' + name)
         })
 
+        $('a').on('click',function (event){
+            event.preventDefault();
+            $('#feedback-message').text('That\'s fine,' + name)
+
+        })
     })
 
 
-});
+
+
+//});
