@@ -194,6 +194,16 @@
            // $(this).parent().remove(); //example but not used in project
         })*/
 
+        /*Add animation video 21. */
+        $('#container').on('click','.more-info-link',function (event) {
+
+            event.preventDefault();
+
+            /*$(this).parent().find('.more-info').show();*/
+            $(this).parent().find('.more-info').toggle();
+        });
+
+
         $('#container').on('click','.item-remove',function () {
 
             //console.log('Legon'); //if it print to console it means it works

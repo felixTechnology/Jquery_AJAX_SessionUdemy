@@ -81,3 +81,7 @@ body,html{
     margin-top: 8px;
     margin-bottom: 8px;
 }
+
+.item .more-info{
+    display: none;
+}
