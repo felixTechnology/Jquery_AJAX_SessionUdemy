@@ -71,7 +71,7 @@ $(document).ready(function(){ //call back function
         //console.log($('#snow').closest('.temperature'));
         //console.log($('#snow').closest('#container'));
 
-        $('.box').on('click', function () {
+     /*   $('.box').on('click', function () {
 
             //console.log('hello')
             //$('.box').addClass('highlight');
@@ -79,6 +79,13 @@ $(document).ready(function(){ //call back function
             //we can improve the code above commented .box . We can replace it with $(this) which literally means it holds in reference within this $('.box').on('click', function ()
             //$(this).addClass('highlight'); //This will add the class if we have it but to remove-and-add we call it toggle
             $(this).toggleClass('highlight');
+        })*/
+
+        //adding an ID of an element '.box-button' ..we call it event-delegation
+        $('.box').on('click',  '.box-button',function () {
+
+            
+            $(this).parent().toggleClass('highlight');
         })
 
     })
