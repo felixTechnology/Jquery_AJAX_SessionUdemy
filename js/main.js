@@ -172,7 +172,7 @@
                  html += '<button class="item-add">Add to Cart</button>';
                  html += '<button class="item-remove">Remove</button>';
                  html +='</br>';
-                    html += '<a href="">More info</a>'
+                    html += '<a href="" class="more-info-link">More info</a>'
                      html +='<div class="more-info">eveniet ex fugit laboriosam maxime molestiae nemo quasi, rem sint ut.</div>';
         html +='</div>';
 
@@ -200,7 +200,12 @@
             event.preventDefault();
 
             /*$(this).parent().find('.more-info').show();*/
-            $(this).parent().find('.more-info').toggle();
+           // $(this).parent().find('.more-info').toggle(1000);
+            //$(this).parent().find('.more-info').toggle('fast');
+           // $(this).parent().find('.more-info').toggle('slow');
+           // $(this).parent().find('.more-info').toggle(1000);
+           // $(this).parent().find('.more-info').slideToggle('slow');
+            $(this).parent().find('.more-info').slideToggle(1000);
         });
 
 
