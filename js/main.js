@@ -206,6 +206,10 @@
            // $(this).parent().find('.more-info').toggle(1000);
            // $(this).parent().find('.more-info').slideToggle('slow');
             $(this).parent().find('.more-info').slideToggle(1000);
+
+            $(this)
+                .animate({"opacity":0.5,"margin-left": 10}, 'fast')
+                .animate({"opacity":1.0,"margin-left": 0}, 'fast')
         });
 
 
