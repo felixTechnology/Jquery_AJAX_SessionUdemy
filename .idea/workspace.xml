@@ -20,6 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="961f3331-a4e9-4be6-9c35-2e94d1bcaac7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/item.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +31,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -36,6 +40,8 @@
         <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="composer.json" />
+        <option value="tsconfig.json" />
       </list>
     </option>
   </component>
@@ -65,22 +71,28 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Program Files/nodejs/node.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Jquery_AJAX_SessionUdemy\assets" />
-      <recent name="C:\xampp\htdocs\Jquery_AJAX_SessionUdemy\js" />
-      <recent name="C:\xampp\htdocs\Jquery_AJAX_SessionUdemy" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Jquery_AJAX_SessionUdemy\js" />
       <recent name="C:\xampp\htdocs\Jquery_AJAX_SessionUdemy\jQuery_Course_session\js" />
       <recent name="C:\xampp\htdocs\Jquery_AJAX_SessionUdemy" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Jquery_AJAX_SessionUdemy\data" />
+      <recent name="C:\xampp\htdocs\Jquery_AJAX_SessionUdemy\assets" />
+      <recent name="C:\xampp\htdocs\Jquery_AJAX_SessionUdemy\js" />
+      <recent name="C:\xampp\htdocs\Jquery_AJAX_SessionUdemy" />
+    </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
+      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
+      <method v="2" />
+    </configuration>
     <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" path-to-node="$PROJECT_DIR$/../../../Program Files/nodejs/node" nameIsGenerated="true" node-parameters="$FileDirRelativeToProjectRoot$" path-to-js-file="js/main.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -104,7 +116,7 @@
       <workItem from="1602096983994" duration="9771000" />
       <workItem from="1602165883265" duration="19818000" />
       <workItem from="1602259626164" duration="5378000" />
-      <workItem from="1602265087030" duration="5907000" />
+      <workItem from="1602265087030" duration="7612000" />
     </task>
     <servers />
   </component>

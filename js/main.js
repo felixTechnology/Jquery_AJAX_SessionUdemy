@@ -221,6 +221,13 @@
 
             //to empty content within a div we use empty();
             // $(this).parent().remove(); //example but not used in project
+        });
+
+        /*To be able to do ajax we need to install NODEJS using your terminal
+        * npm install -g node-http-server
+        * */
+        $.ajax('data/item.json',function () {
+            
         })
     })
 
