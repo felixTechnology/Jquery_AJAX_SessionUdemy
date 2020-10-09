@@ -57,6 +57,20 @@ $(document).ready(function(){ //call back function
         //console.log($('#container').find('.hot').children().last().prev().addClass('highlight'));
 
 
+        //PARENT
+        //assuming you are targeting an element inside a PARENT element and using its ID to target the parent and effect change on all element under it
+       /* console.log($('#snow').parent().addClass('highlight'));*/
+       /* $('#snow').parent().addClass('highlight');*/
+
+        //You can use parent to go up,children to go down
+       // $('#snow').parent().find('.title').addClass('highlight');
+
+        //console.log($('#snow').parents()); //this help to inspect the elements which are parents to know wherever your elements are located
+
+        //This helps you to find the closes parent with satisfy a particular selector you want to target
+        console.log($('#snow').closest('.temperature'));
+        console.log($('#snow').closest('#container'));
+
     })
 
 
