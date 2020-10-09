@@ -42,12 +42,20 @@ $(document).ready(function(){ //call back function
         //Assuming you want to sellect FirstName and Last Name together you go by introducing the asterix with the common word Name
        // $('#container input[placeholder*=Name]').addClass('highlight');
 
-      //Finding element using TRAVERSING
+      //Finding element using TRAVERSING/Finding Element
         //console.log($('#container').find('.hot'));//this will give you a log of all the items under a div with ID Container which has a sub-div with a class HOT
 
         //console.log($('#container').find('.hot').children('.non-solid')); //This is traversing container and specifically filtering for the children which is the nearest first div element closer to the container div
         /*console.log($('#container').find('.hot').children('.non-solid').addClass('highlight'));*/ //adding css colors to test our children div
-        console.log($('#container').find('.hot').children('.solid').addClass('highlight'));
+       // console.log($('#container').find('.hot').children('.solid').addClass('highlight'));
+
+       //Using NEXT
+        //Assuming to want to give effect to selected items in a list items.This will select 1st item
+       // console.log($('#container').find('.hot').children().first().addClass('highlight'));
+        //console.log($('#container').find('.hot').children().last().addClass('highlight'));
+       // console.log($('#container').find('.hot').children().first().next().addClass('highlight'));
+        //console.log($('#container').find('.hot').children().last().prev().addClass('highlight'));
+
 
     })
 
