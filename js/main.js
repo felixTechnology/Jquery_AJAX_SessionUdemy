@@ -32,10 +32,23 @@ $(document).ready(function(){ //call back function
 
         //It means find the div container and locate input tags and apply a css class to it.This will apply on all input but to select the ones you want,follow what is next to this command
         //$('#container input').addClass('highlight');
-        $('#container >> input').addClass('highlight');//we use colon and the identification 'required to select the ones needed
+       // $('#container input:required').addClass('highlight');//we use colon and the identification 'required to select the ones needed
 
         //Assuming out of the fields which are required you want to select only one to have the CSS Color applied on it, you go by the below;
-       // $('#container input[placeholder=E-mail]').addClass('highlight');
+        //$('#container input[placeholder=E-mail]').addClass('highlight');
+        //$('#container input[placeholder="Last Name"]').addClass('highlight'); //whenever your placeholder has more than one word you provide double quotes
+
+
+        //Assuming you want to sellect FirstName and Last Name together you go by introducing the asterix with the common word Name
+       // $('#container input[placeholder*=Name]').addClass('highlight');
+
+      //Finding element using TRAVERSING
+        //console.log($('#container').find('.hot'));//this will give you a log of all the items under a div with ID Container which has a sub-div with a class HOT
+
+        //console.log($('#container').find('.hot').children('.non-solid')); //This is traversing container and specifically filtering for the children which is the nearest first div element closer to the container div
+        /*console.log($('#container').find('.hot').children('.non-solid').addClass('highlight'));*/ //adding css colors to test our children div
+        console.log($('#container').find('.hot').children('.solid').addClass('highlight'));
+
     })
 
 
