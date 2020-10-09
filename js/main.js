@@ -169,7 +169,8 @@
                  </div>`
 
                  html += '<div class="price">GHC 499</div>';
-                html += '<button>Add to Cart</button>';
+                 html += '<button class="item-add">Add to Cart</button>';
+                 html += '<button class="item-remove">Remove</button>';
                  html +='</br>';
                     html += '<a href="">More info</a>'
                      html +='<div class="more-info">eveniet ex fugit laboriosam maxime molestiae nemo quasi, rem sint ut.</div>';
@@ -178,6 +179,30 @@
         /*$('#container').append(html);*/
          $('#container').prepend(html);
      });
+
+     //Removing an item from a list. we will first search for the container, search for the item remove class,
+     //
+
+        //REMOVING ITEM THIS WAY WILL ONLY WORK ON EXISTING ITEM BUT WONT WORK ON PRECEEDING ITEMS..SO TO MAKE IT DYNAMIC DO AS BELOW THIS
+        /*$('#container .item-remove').on('click',function () {
+
+           //console.log('Legon'); //if it print to console it means it works
+
+            $(this).parent().remove();//this is used to remove item.
+
+            //to empty content within a div we use empty();
+           // $(this).parent().remove(); //example but not used in project
+        })*/
+
+        $('#container').on('click','.item-remove',function () {
+
+            //console.log('Legon'); //if it print to console it means it works
+
+            $(this).parent().remove();//this is used to remove item.
+
+            //to empty content within a div we use empty();
+            // $(this).parent().remove(); //example but not used in project
+        })
     })
 
 
