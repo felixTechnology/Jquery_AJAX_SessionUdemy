@@ -145,6 +145,18 @@
         })*/
 
         /******************************Above Code is For practice***************************************/
+     /*Listening to the click effect of button*/
+        /*First paramenter in the .on method is CLICK and second parameter is a call back function*/
+     $('#button-create-item').on('click', function (
+
+     ){
+        /*When we click we need to get the name of the new item,if anything is typed in the field */
+         let name = $('#input-create-item').val();
+         /*console.log(name);*/
+
+         //After saving in name (let name) ,we need to clear the content afterward
+         //In Jquery we have what returns a value and what write a text.
+      });
     })
 
 
