@@ -1,3 +1,28 @@
+
+function addItems(name, description, price , moreInfo ){
+    let html = ' ';
+    html += '<div class="item">';
+    html +=  '<div class="name">' + name +' </div>';
+    html += '<img src="assets/pexels-photo-1640777.jpeg" alt="">';
+    html += '<div class="description">' + description+ '</div>'
+
+    html += '<div class="price">' +price+'</div>';
+    html += '<button class="item-add">Add to Cart</button>';
+    html += '<button class="item-remove">Remove</button>';
+    html +='</br>';
+    html += '<a href="" class="more-info-link">More Info</a>'
+    html +='<div class="more-info"> ' +moreInfo+'</div>';
+    html +='</div>';
+
+    /*$('#container').append(html);*/
+    $('#container').prepend(html);
+
+
+}
+
+
+
+
 //passing object into jquery. This set the document you want to run to ready mode.When it is ready it runs what is in the bracket
 //the document means whatever we want can be tuned into a JQuery Object
 //$(document).ready(function(){ //call back function
@@ -147,10 +172,10 @@
         /******************************Above Code is For practice***************************************/
      /*Listening to the click effect of button*/
         /*First paramenter in the .on method is CLICK and second parameter is a call back function*/
-     $('#button-create-item').on('click', function (
+    /* $('#button-create-item').on('click', function (
 
      ){
-        /*When we click we need to get the name of the new item,if anything is typed in the field */
+        /!*When we click we need to get the name of the new item,if anything is typed in the field *!/
          let name = $('#input-create-item').val();
          //console.log(name);
 
@@ -158,7 +183,7 @@
          //In Jquery we have what returns a value (.value()) and what write (.value(''))
          $('#input-create-item').val('');
 
-         let html = ' ';
+        /!* let html = ' ';
          html += '<div class="item">';
            html +=  '<div class="name">' + name +' </div>';
              html += '<img src="assets/pexels-photo-1640777.jpeg" alt="">';
@@ -176,9 +201,9 @@
                      html +='<div class="more-info">eveniet ex fugit laboriosam maxime molestiae nemo quasi, rem sint ut.</div>';
         html +='</div>';
 
-        /*$('#container').append(html);*/
-         $('#container').prepend(html);
-     });
+        /!*$('#container').append(html);*!/
+         $('#container').prepend(html);*!/
+     });*/
 
      //Removing an item from a list. we will first search for the container, search for the item remove class,
      //
@@ -224,11 +249,41 @@
         });
 
         /*To be able to do ajax we need to install NODEJS using your terminal
-        * npm install -g node-http-server
+        * npm install -g node-http-server#
+        *
+        * We have a function and inside it we hhave what we want to receive(data/item.json) and we have callable function that returns
+        *If we first refresh the page we will have an error
         * */
-        $.ajax('data/item.json',function () {
+        /*$.ajax('data/item.json') *///What is done currently will mean everything will be cached within the local server.//We downloading items of the webstore and it's important it's updated all the time..but this JSON
+        $.ajax('data/item.json',{
+             dataType: 'json',
+             contentType: 'json',
+             cache: false
+        })//PASSING OBJECT AS PROPERTY OF SECOND PARAMETER
+            //console.log(response);
+
+            .done(function (response) { //called whenever this ajax operation finishes executing and it receives the function as a parameter
+         /*     console.log(response);*/
+                /*console.log('Ghana is great');*/
+                let items = response.items;
+                /*console.log(items);*/
+                //Iterating over every element to build new element
+                items.forEach(function (item) {
+                   console.log(item);
+                   addItems(item.name,item.description,item.price,item.moreInfo);
+                });
+
+            })
+
+            .fail(function (request, errorType,errorMessage)
+            {
+                 console.log(errorMessage)
+
+              }) //the fail function will receives more function as possible because it will give more infor on what happened
+
+            .always();
             
-        })
+
     })
 
 

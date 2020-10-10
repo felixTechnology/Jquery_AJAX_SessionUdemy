@@ -1,0 +1,117 @@
+Microsoft Windows [Version 10.0.18363.1082]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\felix>npm
+
+Usage: npm <command>
+
+where <command> is one of:
+    access, adduser, audit, bin, bugs, c, cache, ci, cit,
+    clean-install, clean-install-test, completion, config,
+    create, ddp, dedupe, deprecate, dist-tag, docs, doctor,
+    edit, explore, fund, get, help, help-search, hook, i, init,
+    install, install-ci-test, install-test, it, link, list, ln,
+    login, logout, ls, org, outdated, owner, pack, ping, prefix,
+    profile, prune, publish, rb, rebuild, repo, restart, root,
+    run, run-script, s, se, search, set, shrinkwrap, star,
+    stars, start, stop, t, team, test, token, tst, un,
+    uninstall, unpublish, unstar, up, update, v, version, view,
+    whoami
+
+npm <command> -h  quick help on <command>
+npm -l            display full usage info
+npm help <term>   search for help on <term>
+npm help npm      involved overview
+
+Specify configs in the ini-formatted file:
+    C:\Users\felix\.npmrc
+or on the command line via: npm <command> --key value
+Config info can be viewed via: npm help config
+
+npm@6.14.8 C:\Users\felix\AppData\Roaming\npm\node_modules\npm
+
+C:\Users\felix>npm install -g node-http-server
+C:\Users\felix\AppData\Roaming\npm\node-http-server -> C:\Users\felix\AppData\Roaming\npm\node_modules\node-http-server\bin\nhs.js
++ node-http-server@8.1.2
+added 1 package from 1 contributor in 4.265s
+
+C:\Users\felix>cd c
+The system cannot find the path specified.
+
+C:\Users\felix>cd c:
+C:\Users\felix
+
+C:\Users\felix>cd C:/
+
+C:\>cd xampp
+
+C:\xampp>cd htdocs
+
+C:\xampp\htdocs>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\htdocs>cd ls
+The system cannot find the path specified.
+
+C:\xampp\htdocs>cd dir
+The system cannot find the path specified.
+
+C:\xampp\htdocs>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 90F6-BCC3
+
+ Directory of C:\xampp\htdocs
+
+09/10/2020  22:52    <DIR>          .
+09/10/2020  22:52    <DIR>          ..
+27/08/2019  14:02             3,607 applications.html
+27/08/2019  14:02               177 bitnami.css
+03/10/2020  17:13    <DIR>          BLOG
+05/10/2020  06:16        20,941,242 BLOG.zip
+09/08/2020  12:10    <DIR>          COFFEE
+03/05/2020  08:07    <DIR>          dashboard
+09/05/2020  19:11    <DIR>          ecomphp
+16/07/2015  15:32            30,894 favicon.ico
+03/05/2020  08:07    <DIR>          img
+16/07/2015  15:32               260 index.php
+08/10/2020  07:28    <DIR>          JavaScript_CapstoneProject
+09/10/2020  22:52    <DIR>          Jquery_AJAX_SessionUdemy
+09/10/2020  22:51    <DIR>          jqury
+03/10/2020  03:41    <DIR>          RAW HTML DESIGN FOR BLOG WITHOUT CSS
+18/09/2020  07:07    <DIR>          Resume
+15/09/2020  04:56        40,991,249 Resume.zip
+20/09/2020  09:21    <DIR>          TOURISMO
+03/05/2020  08:07    <DIR>          webalizer
+03/05/2020  08:07    <DIR>          xampp
+               6 File(s)     61,967,429 bytes
+              15 Dir(s)  262,725,136,384 bytes free
+
+C:\xampp\htdocs>cd Jquery_AJAX_SessionUdemy
+
+C:\xampp\htdocs\Jquery_AJAX_SessionUdemy>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\xampp\htdocs\Jquery_AJAX_SessionUdemy>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 90F6-BCC3
+
+ Directory of C:\xampp\htdocs\Jquery_AJAX_SessionUdemy
+
+09/10/2020  22:52    <DIR>          .
+09/10/2020  22:52    <DIR>          ..
+10/10/2020  03:47    <DIR>          .idea
+09/10/2020  22:52    <DIR>          assets
+09/10/2020  22:52               271 composer.json
+09/10/2020  22:52    <DIR>          css
+09/10/2020  22:52    <DIR>          data
+09/10/2020  22:52             1,044 generalInfo
+09/10/2020  22:52    <DIR>          idea saved here
+09/10/2020  22:52             4,470 index.html
+10/10/2020  03:55    <DIR>          js
+09/10/2020  22:52                45 README.md
+               4 File(s)          5,830 bytes
+               8 Dir(s)  262,725,066,752 bytes free
+
+C:\xampp\htdocs\Jquery_AJAX_SessionUdemy>node-http-server
