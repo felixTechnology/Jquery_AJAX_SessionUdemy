@@ -70,22 +70,35 @@
 <br>
 
 <div id="user-data">
+
+    <form  id="cart-form" method="post" action="data/cartSubmit.json">
     <label>Name</label>
-    <input type="text">
-
+    <input name="name" type="text">
+        <br><br>
     <label>Email:</label>
-    <input type="email">
-    <br>
+    <input name="email" type="email">
+    <br><br>
     <label>News Letter</label>
-    <input id="newsletter-checkbox" type="checkbox" checked>
-    <br>
 
-    <select name="" id="newsletter-frequency">
+    <input name="wantNewsletter" id="newsletter-checkbox" type="checkbox" checked>
+    <br><br>
+
+    <select  name="newsletterFrequency" id="newsletter-frequency">
 
         <option value="">Select Period</option>
         <option value="" selected>Weekly</option>
         <option value="">Monthly</option>
     </select>
+
+    <br> <br>
+
+    <button id="submit-cart">Submit</button>
+    </form>
+
+    <div id="feedback-message">
+
+    </div>
+
 </div>
 
 <br>

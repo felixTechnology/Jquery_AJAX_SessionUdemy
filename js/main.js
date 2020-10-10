@@ -334,6 +334,30 @@ function addItems (id, name, description ,price, moreInfo ){
         $('#newsletter-checkbox').trigger('change');
 
 
+        $('#cart-form').on('submit',function (event) {
+          event.preventDefault();
+
+          let data = { form: $(this).serialize(),
+          price: cart
+          };
+
+          console.log(data.form);
+
+          $.ajax($(this).attr('action'),{
+              type: 'post',
+              data: data
+
+
+          })
+          .done(function (response) {
+
+              $('#feedback-message').text(response.message);
+            //alert(response.message);
+              //alert(data)
+              alert(data.form + ':'+ response.message);
+            })
+        });
+
     })
 
 //});
