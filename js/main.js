@@ -1,17 +1,17 @@
-
-function addItems(name, description, price , moreInfo ){
-    let html = ' ';
-    html += '<div class="item">';
+var cart = 0;
+function addItems (id, name, description ,price, moreInfo ){
+    let html = '';
+    html += '<div class="item" data-id="'+ id +'">';
     html +=  '<div class="name">' + name +' </div>';
     html += '<img src="assets/pexels-photo-1640777.jpeg" alt="">';
-    html += '<div class="description">' + description+ '</div>'
+    html += '<div class="description">' + description + '</div>'
 
-    html += '<div class="price">' +price+'</div>';
+    html += '<div class="price">' + price +'</div>';
     html += '<button class="item-add">Add to Cart</button>';
     html += '<button class="item-remove">Remove</button>';
     html +='</br>';
     html += '<a href="" class="more-info-link">More Info</a>'
-    html +='<div class="more-info"> ' +moreInfo+'</div>';
+    html +='<div class="more-info"> ' + moreInfo +'</div>';
     html +='</div>';
 
     /*$('#container').append(html);*/
@@ -269,8 +269,8 @@ function addItems(name, description, price , moreInfo ){
                 /*console.log(items);*/
                 //Iterating over every element to build new element
                 items.forEach(function (item) {
-                   console.log(item);
-                   addItems(item.name,item.description,item.price,item.moreInfo);
+                  // console.log(item);
+                   addItems(item.id,item.name,item.description,item.price,item.moreInfo);
                 });
 
             })
@@ -281,12 +281,59 @@ function addItems(name, description, price , moreInfo ){
 
               }) //the fail function will receives more function as possible because it will give more infor on what happened
 
-            .always();
-            
+            .always(function () {
+
+            });
+
+
+        $('#container').on('click','.item-add',function(){
+
+            let id = $(this).parent().data('id')
+            //console.log(id);
+            $.ajax('data/addToCart.json', {
+                type: 'post',
+                data: { id: id},//creating an object which has a parameter called id AND HAVING ITS Value from .data('id') passed to it
+                dataType: 'json',
+                contentType: 'application/json',
+
+            })
+
+                .done(function (response) {
+                    //console.log(response)
+
+                    if (response.message === 'success'){
+
+                        let price = response.price;
+                        console.log(price);
+
+                        cart += price;
+
+                        $('#cart-container').text(' GHC ' + cart)
+
+                    }
+
+                })
+    });
+
+
+        $('#newsletter-checkbox').on('change',function () {
+
+            if ($(this).is(':checked')){
+               // console.log('Yes');
+                $('#newsletter-frequency').fadeIn();
+              /*  $('#newsletter-frequency').show();*/
+            }else{
+                /* console.log('No')*/
+
+               /* $('#newsletter-frequency').hide();*/
+                $('#newsletter-frequency').fadeOut();
+            }
+
+        })
+
+        $('#newsletter-checkbox').trigger('change');
+
 
     })
-
-
-
 
 //});
